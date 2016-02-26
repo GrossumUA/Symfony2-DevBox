@@ -1,0 +1,33 @@
+Application\Grossum\StaticPageBundle\Entity\StaticPage:
+    type:  entity
+    table: static_page
+    repositoryClass: Gedmo\Tree\Entity\Repository\NestedTreeRepository
+#    repositoryClass: Application\Grossum\StaticPageBundle\Entity\Repository\StaticPageRepository
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    manyToOne:
+        root:
+            targetEntity: Application\Grossum\StaticPageBundle\Entity\StaticPage
+            nullable: true
+            joinColumn:
+                referencedColumnName: id
+                onDelete: CASCADE
+            gedmo:
+                - treeRoot
+        parent:
+            targetEntity: Application\Grossum\StaticPageBundle\Entity\StaticPage
+            inversedBy: children
+            joinColumn:
+                referencedColumnName: id
+                onDelete: CASCADE
+            gedmo:
+                - treeParent
+    oneToMany:
+        children:
+            targetEntity: Application\Grossum\StaticPageBundle\Entity\StaticPage
+            mappedBy: parent
+            orderBy:
+                lft: ASC

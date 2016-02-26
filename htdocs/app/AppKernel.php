@@ -38,6 +38,11 @@ class AppKernel extends Kernel
             new Grossum\CoreBundle\GrossumCoreBundle(),
             new Grossum\MenuBundle\GrossumMenuBundle(),
             new Application\Grossum\MenuBundle\ApplicationGrossumMenuBundle()
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Grossum\StaticPageBundle\GrossumStaticPageBundle(),
+            new Application\Grossum\StaticPageBundle\ApplicationGrossumStaticPageBundle(),
+
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
