@@ -27,8 +27,10 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            new CoopTilleuls\Bundle\CKEditorSonataMediaBundle\CoopTilleulsCKEditorSonataMediaBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
 
             new Application\UserBundle\ApplicationUserBundle(),
             new Application\Sonata\AdminBundle\ApplicationSonataAdminBundle(),
@@ -37,7 +39,11 @@ class AppKernel extends Kernel
             new Application\Grossum\ContactBundle\ApplicationGrossumContactBundle(),
             new Grossum\CoreBundle\GrossumCoreBundle(),
             new Grossum\MenuBundle\GrossumMenuBundle(),
-            new Application\Grossum\MenuBundle\ApplicationGrossumMenuBundle()
+            new Application\Grossum\MenuBundle\ApplicationGrossumMenuBundle(),
+            new Grossum\StaticPageBundle\GrossumStaticPageBundle(),
+            new Application\Grossum\StaticPageBundle\ApplicationGrossumStaticPageBundle(),
+            new Grossum\FaqBundle\GrossumFaqBundle(),
+            new Application\Grossum\FaqBundle\ApplicationGrossumFaqBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

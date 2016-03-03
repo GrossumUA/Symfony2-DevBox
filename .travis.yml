@@ -24,7 +24,6 @@ before_script:
  - travis_retry composer selfupdate
  - travis_retry composer install --no-interaction
  - ant build
- - php bin/codecept build
 
 script:
- - php bin/codecept run
+ - true
