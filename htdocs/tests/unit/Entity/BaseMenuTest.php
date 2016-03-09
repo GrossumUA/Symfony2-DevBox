@@ -24,14 +24,14 @@ class BaseMenuTest extends \PHPUnit_Framework_TestCase
     public function testRelations()
     {
         $this->assertPropertyCollections($this->createBaseMenu(), [
-            ['menus', new BaseMenu()],
+            ['menu_items', new BaseMenu()],
         ]);
     }
     public function testToString()
     {
         $entity = new BaseMenu();
         $this->assertEmpty((string)$entity);
-        $entity->setCode('test');
+        $entity->setName('test');
         $this->assertEquals('test', (string)$entity);
     }
     public function testPreUpdate()
