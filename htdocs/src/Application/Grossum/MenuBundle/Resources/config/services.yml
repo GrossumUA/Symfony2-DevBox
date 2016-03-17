@@ -1,0 +1,16 @@
+services:
+    application_grossum_menu.contact.menu_handler:
+        class: Application\Grossum\MenuBundle\Menu\ContactMenuHandler
+        parent: grossum_menu.abstract.menu_handler
+        calls:
+            - [setEntityManager, ["@grossum_core.entity_manager"]]
+        tags:
+            - { name: grossum_menu.menu_handler }
+
+    application_grossum_menu.static_page.menu_handler:
+        class: Application\Grossum\MenuBundle\Menu\StaticPageMenuHandler
+        parent: grossum_menu.abstract.menu_handler
+        calls:
+            - [setEntityManager, ["@grossum_core.entity_manager"]]
+        tags:
+            - { name: grossum_menu.menu_handler }
