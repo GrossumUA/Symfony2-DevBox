@@ -30,7 +30,6 @@ class AppKernel extends Kernel
             new CoopTilleuls\Bundle\CKEditorSonataMediaBundle\CoopTilleulsCKEditorSonataMediaBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
 
             new Application\UserBundle\ApplicationUserBundle(),
             new Application\Sonata\AdminBundle\ApplicationSonataAdminBundle(),

@@ -26,16 +26,5 @@ class Configuration implements ConfigurationInterface
      */
     private function addModelSection(ArrayNodeDefinition $node)
     {
-//        $node
-//            ->children()
-//                ->arrayNode('class')
-//                    ->addDefaultsIfNotSet()
-//                    ->children()
-//                        ->scalarNode('menu')->defaultValue('Application\\Grossum\\MenuBundle\\Entity\\Menu')->end()
-//                        ->scalarNode('menu_item')->defaultValue('Application\\Grossum\\MenuBundle\\Entity\\MenuItem')
-//                        ->end()
-//                    ->end()
-//                ->end()
-//            ->end();
     }
 }
