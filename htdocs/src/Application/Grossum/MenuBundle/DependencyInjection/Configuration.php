@@ -16,15 +16,6 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('application_grossum_menu');
 
-        $this->addModelSection($rootNode);
-
         return $treeBuilder;
-    }
-
-    /**
-     * @param ArrayNodeDefinition $node
-     */
-    private function addModelSection(ArrayNodeDefinition $node)
-    {
     }
 }

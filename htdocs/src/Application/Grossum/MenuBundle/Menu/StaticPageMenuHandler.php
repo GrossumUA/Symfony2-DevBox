@@ -10,8 +10,6 @@ class StaticPageMenuHandler extends AbstractMenuHandler
 {
     const IDENTIFIER_CLASS = 'Application\Grossum\StaticPageBundle\Entity\StaticPage';
 
-    //TODO: This class only for testing. When we finish we NEED to remove IT;
-
     /**
      * @var EntityManager
      */
@@ -41,16 +39,15 @@ class StaticPageMenuHandler extends AbstractMenuHandler
         return self::IDENTIFIER_CLASS;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getIdentifierList()
     {
         $menuItems = $this
             ->entityManager
-            ->createQuery('
-                SELECT sp
-                FROM ApplicationGrossumStaticPageBundle:StaticPage AS sp
-                WHERE sp.parent IS NOT NULL
-            ')
-            ->getResult();
+            ->getRepository('ApplicationGrossumStaticPageBundle:StaticPage')
+            ->findNotRootStaticPages();
 
         return $menuItems;
     }

@@ -10,8 +10,6 @@ class ContactMenuHandler extends AbstractMenuHandler
 {
     const IDENTIFIER_CLASS = 'Application\Grossum\ContactBundle\Entity\Contact';
 
-    //TODO: This class only for testing. When we finish we NEED to remove IT;
-
     /**
      * @var EntityManager
      */
@@ -41,6 +39,9 @@ class ContactMenuHandler extends AbstractMenuHandler
         return self::IDENTIFIER_CLASS;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getIdentifierList()
     {
         $contacts = $this
