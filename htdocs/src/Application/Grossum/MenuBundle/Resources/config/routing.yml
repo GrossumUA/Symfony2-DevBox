@@ -1,0 +1,3 @@
+application_grossum_index:
+    path:      /application/menu/test
+    defaults:  { _controller: ApplicationGrossumMenuBundle:Default:index }
