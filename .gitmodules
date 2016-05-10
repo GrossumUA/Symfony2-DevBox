@@ -25,3 +25,12 @@
 [submodule "htdocs/src/Grossum/MenuBundle"]
 	path = htdocs/src/Grossum/MenuBundle
 	url = https://github.com/GrossumUA/MenuBundle.git
+[submodule "htdocs/src/Elcodi/Component/EntityTranslator"]
+	path = htdocs/src/Elcodi/Component/EntityTranslator
+	url = https://github.com/GrossumUA/EntityTranslator.git
+[submodule "htdocs/src/Elcodi/Bundle/EntityTranslatorBundle"]
+	path = htdocs/src/Elcodi/Bundle/EntityTranslatorBundle
+	url = git@github.com:GrossumUA/EntityTranslatorBundle.git
+[submodule "htdocs/src/Elcodi/Bundle/LanguageBundle"]
+	path = htdocs/src/Elcodi/Bundle/LanguageBundle
+	url = git@github.com:GrossumUA/LanguageBundle.git

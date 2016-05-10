@@ -73,6 +73,16 @@ doctrine:
             ApplicationGrossumStaticPageBundle: ~
             GrossumFaqBundle: ~
             ApplicationGrossumFaqBundle: ~
+            ElcodiComponentEntityTranslator:
+                type: yml
+                dir: '%kernel.root_dir%/../src/Elcodi/Bundle/EntityTranslatorBundle/Resources/config/doctrine'
+                is_bundle: false
+                prefix: Elcodi\Component\EntityTranslator\Entity
+            ElcodiComponentLanguage:
+                type: yml
+                dir: '%kernel.root_dir%/../src/Elcodi/Bundle/LanguageBundle/Resources/config/doctrine'
+                is_bundle: false
+                prefix: Elcodi\Component\Language\Entity
 
             gedmo_tree:
                 type: annotation
@@ -96,3 +106,21 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+doctrine_cache:
+    providers:
+        elcodi_translations:
+            type: array
+            namespace: elcodi_translations
+
+elcodi_entity_translator:
+    auto_translate: true
+    language:
+        master_locale: %locale%
+        fallback: true
+    configuration:
+        Application\Grossum\FaqBundle\Entity\Faq:
+            alias: grossum_faq
+            fields:
+                question: ~
+                answer: ~

@@ -32,7 +32,9 @@
         "tilleuls/ckeditor-sonata-media-bundle": "^1.0",
         "gedmo/doctrine-extensions": "^2.4",
         "stof/doctrine-extensions-bundle": "^1.2",
-        "friendsofsymfony/jsrouting-bundle": "^1.6"
+        "friendsofsymfony/jsrouting-bundle": "^1.6",
+        "elcodi/core-bundle": "^2.0",
+        "elcodi/language": "^2.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.5",

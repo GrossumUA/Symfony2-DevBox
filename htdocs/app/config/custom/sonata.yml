@@ -16,6 +16,10 @@ sonata_admin:
         layout: ApplicationSonataAdminBundle::standard_layout_override.html.twig
         select: ApplicationSonataAdminBundle:CRUD:list__select_override.html.twig
         user_block: ApplicationSonataAdminBundle:block:user_block.html.twig
+    extensions:
+        elcodi.admin.extension.translator:
+            admins:
+                - grossum_faq.admin.faq
 
 sonata_media:
     default_context: default

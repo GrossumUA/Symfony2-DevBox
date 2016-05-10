@@ -44,6 +44,11 @@ class AppKernel extends Kernel
             new Application\Grossum\StaticPageBundle\ApplicationGrossumStaticPageBundle(),
             new Grossum\FaqBundle\GrossumFaqBundle(),
             new Application\Grossum\FaqBundle\ApplicationGrossumFaqBundle(),
+
+            new Doctrine\Bundle\DoctrineCacheBundle\DoctrineCacheBundle(),
+            new Elcodi\Bundle\CoreBundle\ElcodiCoreBundle(),
+            new Elcodi\Bundle\LanguageBundle\ElcodiLanguageBundle(),
+            new Elcodi\Bundle\EntityTranslatorBundle\ElcodiEntityTranslatorBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
